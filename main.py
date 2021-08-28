@@ -60,20 +60,20 @@ def switch(message): # вывод клавиатуры с списком чат�
 @tg_session.message_handler(commands=['switch'])
 def switch(message): # смена чата
     global isChat
-    # try:
     global current_chat
-    if chats[message.text.split()[1]] != None and "_chat" not in message.text:
-        current_chat=vk_session.method("users.get", {"user_ids":chats[message.text.split()[1]]})[0]["id"]
-        tg_session.send_message(message.chat.id,f"Чат сменен на {message.text.split()[1]}")
-        isChat=False
-    elif chats[message.text.split()[1]] != None and "_chat" in message.text:
-        current_chat=2000000000+int(chats[message.text.split()[1]])
-        isChat=True
-        tg_session.send_message(message.chat.id,f"Чат сменен на {message.text.split()[1]}")
-    else:
-        tg_session.send_message(message.chat.id,"Такого чата в базе нет")
-    # except:
-    #     tg_session.send_message(message.chat.id,f"Что-то упало :(")
+    try:
+        if chats[message.text.split()[1]] != None and "_chat" not in message.text:
+            current_chat=vk_session.method("users.get", {"user_ids":chats[message.text.split()[1]]})[0]["id"]
+            tg_session.send_message(message.chat.id,f"Чат сменен на {message.text.split()[1]}")
+            isChat=False
+        elif chats[message.text.split()[1]] != None and "_chat" in message.text:
+            current_chat=2000000000+int(chats[message.text.split()[1]])
+            isChat=True
+            tg_session.send_message(message.chat.id,f"Чат сменен на {message.text.split()[1]}")
+        else:
+            tg_session.send_message(message.chat.id,"Такого чата в базе нет")
+    except:
+        tg_session.send_message(message.chat.id,f"Что-то упало :(")
 
 @tg_session.message_handler(content_types=["text"])
 def send(message):
