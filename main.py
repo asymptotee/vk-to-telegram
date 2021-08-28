@@ -77,12 +77,13 @@ def switch(message): # смена чата
 
 @tg_session.message_handler(content_types=["text"])
 def send(message):
-    if message.text[0] != "/" and message.text[0] != "!" and isChat==False:
-        vk.messages.send(user_id=str(current_chat),random_id=0,message=str(message.text))
-    elif message.text[0] != "/" and message.text[0] != "!" and isChat==True:
-        vk.messages.send(peer_id=str(current_chat),random_id=0,message=str(message.text))
-    else:
-        print(message.text)
+    try:
+        if message.text[0] != "/" and message.text[0] != "!" and isChat==False:
+            vk.messages.send(user_id=str(current_chat),random_id=0,message=str(message.text))
+        elif message.text[0] != "/" and message.text[0] != "!" and isChat==True:
+            vk.messages.send(peer_id=str(current_chat),random_id=0,message=str(message.text))
+    except:
+        pass
 
 
 def get_reply(message_data):
