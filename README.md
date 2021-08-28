@@ -1,11 +1,11 @@
-# vk-to-telegram
+# vk-to-telegram [BETA]
 
 Данный проект поможет вам взаимодействовать с чатами в ВК из бота в Телграме.
 
 ## Установка:
 
 ```
-git clone ...
+git clone https://github.com/lytk4dev/vk-to-telegram.git
 cd vk-to-telegram
 pip insall -r requirements.txt
 ```
