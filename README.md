@@ -19,6 +19,7 @@
   
     <img src="media/ls.png">
 - Переслыка сообщений из ВК с ответом
+  
     <img src="media/chat_reply.png">
     <img src="media/reply.png">
 - Смена чата
