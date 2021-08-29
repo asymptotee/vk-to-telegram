@@ -47,13 +47,15 @@ def start(message):
 
 @tg_session.message_handler(commands=['chats'])
 def switch(message): # вывод клавиатуры с списком чатов из chats.json
-    keyboard = types.ReplyKeyboardMarkup(row_width=2, resize_keyboard=True, one_time_keyboard=True)
-    buttons=[]
-    for i in chats.keys():
-        buttons.append(f"/switch {i}")
-    keyboard.add(*buttons)
-    tg_session.send_message(message.chat.id, "Выберите чат", reply_markup=keyboard)
-    keyboard = types.ReplyKeyboardRemove()
+    try:
+        keyboard = types.ReplyKeyboardMarkup(row_width=2, resize_keyboard=True, one_time_keyboard=True)
+        buttons=[]
+        for i in chats.keys():
+            buttons.append(f"/switch {i}")
+        keyboard.add(*buttons)
+        tg_session.send_message(message.chat.id, "Выберите чат", reply_markup=keyboard)
+    except:
+        tg_session.send_message(message.chat.id, "Что-то упало :( Возможно вы не указали чаты в chats.json", reply_markup=keyboard)
 
 # vk.messages.send(peer_id=2000000242, random_id=0,message="Привет")
 
