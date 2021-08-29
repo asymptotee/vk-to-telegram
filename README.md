@@ -1,11 +1,13 @@
 # ![](media/header.png)
 <div align="center">
     <h3>Держи все, что нужно в лучшем мессенджере ⭐</h6>
-    <a href="https://t.me/vkintelegram"><img src="https://img.shields.io/badge/telegram-@vkintelegram-blue?style=flat-square"></a>
+    <a href="https://t.me/vkintelegram"><img src="https://img.shields.io/badge/telegram-@vkintelegram-blue?style=flat-square"></a> <img src="https://img.shields.io/github/last-commit/lytk4dev/vk-to-telegram?style=flat-square">
     <h5>Built with ❤︎, by <a href="https://t.me/l4rem">@l4rem</a></h5>
 </div>
 <br>
 Поддерживаемый, написанный для людей бот, для переноса сообщений из вк в тг и наоборот.
+<br>
+<br>
 <p align="center">
     <img src="media/preview.gif">
     <hr>
@@ -14,10 +16,10 @@
 
 ## Функционал
 - Пересылка сообщений из вк в телеграм и наоборот
+  
+    <img src="media/ls.png">
 - Переслыка сообщений из ВК с ответом
-    <p>Название беседы | Сообщение на которое отвечают | Сообщение</p>
     <img src="media/chat_reply.png">
-    <p>Сообщение на которое отвечают | Сообщение</p>
     <img src="media/reply.png">
 - Смена чата
   
