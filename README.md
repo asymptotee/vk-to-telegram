@@ -38,3 +38,6 @@
 1. **pip install -r requirements.txt**
 2. **python main.py**
 3. **В созданном боте в тг, пропишите /start**
+# 🐋 Docker
+1. **docker pull python**
+2. **docker -t vk-to-telegram .**
