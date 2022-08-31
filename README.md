@@ -2,7 +2,7 @@
 <div align="center">
     <h3>Держи все, что нужно в лучшем мессенджере ⭐</h6>
     <a href="https://t.me/vkintelegram"><img src="https://img.shields.io/badge/telegram-@vkintelegram-blue?style=flat-square"></a> <img src="https://img.shields.io/github/last-commit/lytk4dev/vk-to-telegram?style=flat-square">
-    <h5>Built with ❤︎, by LYTK4</h5>
+    <h5>Built with ❤︎, by saymyname</h5>
 </div>
 <br>
 Написанный для людей бот, для переноса сообщений из вк в тг и наоборот.
