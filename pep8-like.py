@@ -69,9 +69,6 @@ def switch(message):  # вывод клавиатуры с списком чат
         tg_session.send_message(message.chat.id, "Что-то упало :( Возможно вы не указали чаты в chats.json",
                                 reply_markup=keyboard)
 
-
-# vk.messages.send(peer_id=2000000242, random_id=0,message="Привет")
-
 @tg_session.message_handler(commands=['switch'])
 def switch(message):  # смена чата
     global isChat
